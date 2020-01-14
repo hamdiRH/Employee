@@ -1,0 +1,71 @@
+// Layout Style
+.logo {
+  width: 100%;
+  margin: 30px 0;
+}
+.layout-header {
+  background: #fff !important;
+  padding: 0 !important;
+  .layout-header-title {
+    font-weight: 700;
+    margin-left: 50px;
+    color: purple;
+  }
+}
+.layout-content {
+  margin: 24px 16px 0;
+}
+
+.layout-content > div {
+  padding: 24px;
+  background: #fff;
+  min-height: 85vh;
+}
+.layout-footer {
+  text-align: center;
+}
+
+// table Style
+.ant-avatar {
+  color: #f56a00 !important;
+  background-color: #fde3cf !important;
+}
+.ant-layout-sider {
+  flex: 0 0 300px !important;
+  max-width: 300px !important;
+}
+
+.antCol {
+  padding: 50px !important;
+  margin: 10px !important;
+  box-shadow: 0 0 10px black;
+}
+.logo-profile {
+  width: 150px;
+  margin-bottom: 20px;
+}
+.bold {
+  font-weight: bold;
+}
+.purple {
+  color: purple;
+}
+.education {
+  text-align: center;
+  font-weight: 900;
+  color: red;
+}
+.seperator {
+  text-align: center;
+  font-weight: 900;
+  color: red;
+}
+.icon {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80px;
+}
+.m-reset{
+margin: 0 !important;
+}
