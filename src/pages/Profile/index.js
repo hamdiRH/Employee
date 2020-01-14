@@ -7,7 +7,8 @@ import {fetchEmployments} from '../../redux/action'
 
 const mapStateToProps = (state, ownProps) => {
     return {
-      employe: selectOneEmployes(state,ownProps.match.params.id)
+      employe: selectOneEmployes(state,ownProps.match.params.id),
+      loading:state.loading
     };
   };
 
