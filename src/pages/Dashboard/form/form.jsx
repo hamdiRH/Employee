@@ -1,7 +1,17 @@
 import React, { useEffect } from "react";
 
-import { Form, Input, Tooltip, Icon, Cascader, Radio, Button, message } from "antd";
-
+import {
+  Form,
+  Input,
+  Tooltip,
+  Icon,
+  Cascader,
+  Radio,
+  Button,
+  message
+} from "antd";
+import { FormattedMessage } from "react-intl";
+import messages from "../messages";
 const RegistrationForm = ({
   form,
   addEmployment,
@@ -16,7 +26,10 @@ const RegistrationForm = ({
         if (edit) {
           updateEmployment(data.id, values);
           message.success("Employe updated");
-        } else {addEmployment(values);message.success("Employe added");}
+        } else {
+          addEmployment(values);
+          message.success("Employe added");
+        }
       }
     });
   };
@@ -88,7 +101,6 @@ const RegistrationForm = ({
     }
   ];
   useEffect(() => {
-    console.log(data)
     data &&
       form.setFieldsValue({
         fullName: data.fullName,
@@ -98,7 +110,7 @@ const RegistrationForm = ({
         hireDate: data.hireDate,
         departement: data.departement
       });
-  }, []);
+  }, [data,form]);
   return (
     <Form {...formItemLayout} onSubmit={handleSubmit}>
       <Form.Item
@@ -158,10 +170,10 @@ const RegistrationForm = ({
       <Form.Item label="departement">
         {getFieldDecorator("departement")(
           <Radio.Group>
-            <Radio value="engineering">engineering</Radio>
-            <Radio value="Education">Education</Radio>
-            <Radio value="Marketing">Marketing</Radio>
-            <Radio value="Sales">Sales</Radio>
+            <Radio value="engineering"><FormattedMessage {...messages.Engineering} /></Radio>
+            <Radio value="Education"><FormattedMessage {...messages.Education} /></Radio>
+            <Radio value="Marketing"><FormattedMessage {...messages.Marketing} /></Radio>
+            <Radio value="Sales"><FormattedMessage {...messages.Sales} /></Radio>
           </Radio.Group>
         )}
       </Form.Item>
@@ -190,5 +202,4 @@ const RegistrationForm = ({
 const WrappedRegistrationForm = Form.create({ name: "register" })(
   RegistrationForm
 );
-export default WrappedRegistrationForm
-
+export default WrappedRegistrationForm;
