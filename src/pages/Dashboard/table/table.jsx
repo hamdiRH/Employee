@@ -1,6 +1,8 @@
 import React, {useState} from "react";
 import { Table, Dropdown, Menu, Icon, Avatar, Popconfirm, message } from "antd";
+
 import Modal from '../modal'
+
 const TableData = ({ data,deleteEmployments,history,updateEmployment }) => {
   const [filteredInfo, setFilteredInfo] = useState({});
   const [sortedInfo, setSortedInfo] = useState({});

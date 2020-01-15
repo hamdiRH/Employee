@@ -12,7 +12,6 @@ export function addEmployment(newEmploye) {
   };
 }
 export function updateEmployment(id,updatedContact ) {
-  console.log(id+'  '+updatedContact)
  return {
    type: CONSTANTS.PUT_EMPLOYMENT_REQUEST,id,updatedContact
  }

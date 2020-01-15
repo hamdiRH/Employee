@@ -10,7 +10,6 @@ const Header = () => {
   return (
     <Header className="layout-header">
       <Link to="/">
-        {" "}
         <h1 className="layout-header-title">
         <FormattedMessage {...messages.header} />
           </h1>

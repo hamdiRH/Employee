@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
+
 import Modal from "./modal"
 import Table from "./table";
-
 import LoadingWraper from "../../utils/LoadingWrapper";
-// import Modal from "../modal";
+
 
 const EmploymentList = ({
   deleteEmployments,
@@ -26,7 +26,6 @@ const EmploymentList = ({
   });
   return (
     <div>
-      <div className="table-operations">{/* <Modal /> */}</div>
       <LoadingWraper skeletonConfig={oneRowItemSkeleton(loading)}>
           <Modal addEmployment={addEmployment}/>
         <Table
